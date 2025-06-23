@@ -43,6 +43,54 @@ Aplicação web desenvolvida com Laravel 10 para gerenciamento completo de usuá
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seuusuario/seurepositorio.git
-cd seurepositorio
+git clone https://github.com/Fprogamador/desafio-laravel.git
+cd desafio-laravel
 
+2. Instale as dependências PHP
+Certifique-se de ter o Composer instalado.
+
+composer install
+
+Copie o arquivo .env e configure
+
+cp .env.example .env
+
+3. Depois, edite o .env e configure suas variáveis de ambiente, como conexão com o banco de dados e Mailtrap:
+
+APP_NAME="Desafio Laravel"
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=desafio_laravel
+DB_USERNAME=root
+DB_PASSWORD=
+
+O MailTrap ja esta configurado.
+
+⚠️ Crie o banco de dados com o nome desafio_laravel no phpMyAdmin ou outro gerenciador MySQL.
+
+4. Gere a chave da aplicação
+
+php artisan key:generate
+
+5. Rode as migrações
+
+php artisan migrate
+
+6. Instale as dependências front-end com o NPM
+Certifique-se de ter o Node.js e o NPM instalados:
+
+npm install
+npm run dev
+
+7. Inicie o servidor
+
+php artisan serve
+Acesse o sistema em: http://localhost:8000
+
+8. Teste o envio de e-mails
+Após cadastrar um novo usuário, verifique o inbox do Mailtrap para ver o e-mail de boas-vindas.
+
+9. Executar testes automatizados
