@@ -57,6 +57,34 @@ cp .env.example .env
 
 3. Depois, edite o .env e configure suas variáveis de ambiente, como conexão com o banco de dados e Mailtrap:
 
+Caso você não tenha um banco de dados configurado, siga os passos abaixo para usar o XAMPP, que já inclui o MySQL e o phpMyAdmin:
+
+3.1/ Instale o XAMPP
+Baixe e instale o XAMPP em:
+https://www.apachefriends.org/index.html
+
+3.2. Inicie os serviços
+Abra o Painel de Controle do XAMPP e inicie:
+
+Apache
+
+MySQL
+
+3.3. Acesse o phpMyAdmin
+Acesse via navegador:
+http://localhost/phpmyadmin
+
+4.3 Crie o banco de dados
+Clique em "Novo" no menu lateral.
+
+Informe o nome desafio_laravel.
+
+Clique em "Criar".
+
+Não é necessário criar tabelas manualmente. As tabelas serão criadas ao rodar o comando:
+
+php artisan migrate
+
 APP_NAME="Desafio Laravel"
 APP_URL=http://localhost:8000
 
@@ -92,5 +120,7 @@ Acesse o sistema em: http://localhost:8000
 
 8. Teste o envio de e-mails
 Após cadastrar um novo usuário, verifique o inbox do Mailtrap para ver o e-mail de boas-vindas.
+Para isso clique no botão SandBox->My Sandbox
+Os email-s estarão no lado esquerdo
 
 9. Executar testes automatizados
