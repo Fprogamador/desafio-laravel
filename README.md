@@ -59,7 +59,7 @@ cp .env.example .env
 
 Caso você não tenha um banco de dados configurado, siga os passos abaixo para usar o XAMPP, que já inclui o MySQL e o phpMyAdmin:
 
-3.1/ Instale o XAMPP
+3.1. Instale o XAMPP
 Baixe e instale o XAMPP em:
 https://www.apachefriends.org/index.html
 
@@ -85,6 +85,10 @@ Não é necessário criar tabelas manualmente. As tabelas serão criadas ao roda
 
 php artisan migrate
 
+Rode o MySQL no Apache clicando em Start
+
+.env 
+
 APP_NAME="Desafio Laravel"
 APP_URL=http://localhost:8000
 
@@ -96,8 +100,6 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 O MailTrap ja esta configurado.
-
-⚠️ Crie o banco de dados com o nome desafio_laravel no phpMyAdmin ou outro gerenciador MySQL.
 
 4. Gere a chave da aplicação
 
